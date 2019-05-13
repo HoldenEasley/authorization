@@ -24,14 +24,16 @@ preview:
     SPRING_PROFILES_ACTIVE: postgres
     POSTGRES_DATABASE_HOST: preview-authorization-db-proxy
     POSTGRES_DATABASE_PORT: "5432"
-    POSTGRES_DATABASE_USER_NAME: username
-    POSTGRES_DATABASE_PASSWORD: password
+    POSTGRES_DATABASE_USER_NAME: su_username
+    POSTGRES_DATABASE_PASSWORD: su_password
   envFromSecretRef: []
 
 # Stolon Configuration
 authorization-db:
-  superuserUsername: username
-  superuserPassword: password
+  superuserUsername: su_username
+  superuserPassword: su_password
+  replicationUsername: rp_username
+  replicationPassword: rp_password
   clusterSpec:
     synchronousReplication: true
     minSynchronousStandbys: 1 # quorum-like replication
