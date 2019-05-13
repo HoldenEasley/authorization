@@ -9,7 +9,7 @@ image:
 
 # define environment variables here as a map of key: value
 env:
-  - SPRING_PROFILES_ACTIVE: postgres
+  SPRING_PROFILES_ACTIVE: postgres
 
 envFromSecretRef:
   - name: POSTGRES_DATABASE_USER_NAME

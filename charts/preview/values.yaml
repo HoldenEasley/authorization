@@ -21,9 +21,9 @@ preview:
     tag:
     pullPolicy: IfNotPresent
   env:
-    - SPRING_PROFILES_ACTIVE: postgres
-    - POSTGRES_DATABASE_USER_NAME: username
-    - POSTGRES_DATABASE_PASSWORD: password
+    SPRING_PROFILES_ACTIVE: postgres
+    POSTGRES_DATABASE_USER_NAME: username
+    POSTGRES_DATABASE_PASSWORD: password
 
 # Stolon Configuration
 authorization-db:
