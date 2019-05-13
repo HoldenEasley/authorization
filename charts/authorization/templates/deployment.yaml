@@ -28,6 +28,13 @@ spec:
         - name: {{ $pkey }}
           value: {{ $pval }}
 {{- end }}
+{{- range .Values.envFromSecretRef }}
+        - name: {{ .name }}
+          valueFrom:
+            secretKeyRef:
+              name: {{ .secretRefName }}
+              key: {{ .secretRefKey }}
+{{- end}}
         - name: POSTGRES_DATABASE_USER_NAME
           valueFrom:
             secretKeyRef:

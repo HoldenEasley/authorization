@@ -11,6 +11,14 @@ image:
 env:
   - SPRING_PROFILES_ACTIVE: postgres
 
+envFromSecretRef:
+  - name: POSTGRES_DATABASE_USER_NAME
+    secretRefName: pg-su
+    secretRefKey: username
+  - name: POSTGRES_DATABASE_PASSWORD
+    secretRefName: pg-su
+    secretRefKey: password
+
 # enable this flag to use knative serve to deploy the app
 knativeDeploy: false
 
