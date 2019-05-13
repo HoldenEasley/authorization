@@ -9,8 +9,8 @@ dependencies:
   repository: http://chartmuseum.jenkins-x.io
   version: 2.3.92
 - alias : authorization-db
-  repository: http://chartmuseum.jenkins-x.io
-  name: stable/stolon
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  name: stolon
   version: 1.1.0
   # !! "alias: preview" must be last entry in dependencies array !!
   # !! Place custom dependencies above !!

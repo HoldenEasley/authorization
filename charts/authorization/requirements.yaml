@@ -1,5 +1,5 @@
 dependencies:
   - alias: authorization-db
-    repository: http://chartmuseum.jenkins-x.io
-    name: stable/stolon
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    name: stolon
     version: 1.1.0
