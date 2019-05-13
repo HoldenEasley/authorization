@@ -28,6 +28,16 @@ spec:
         - name: {{ $pkey }}
           value: {{ $pval }}
 {{- end }}
+        - name: POSTGRES_DATABASE_USER_NAME
+          valueFrom:
+            secretKeyRef:
+              name: pg-su
+              key: username
+        - name: POSTGRES_DATABASE_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: pg-su
+                key: password
         ports:
         - containerPort: {{ .Values.service.internalPort }}
         livenessProbe:
