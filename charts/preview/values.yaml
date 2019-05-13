@@ -30,14 +30,8 @@ preview:
 
 # Stolon Configuration
 authorization-db:
-  superuserSecret:
-    name: pg-su
-    usernameKey: username
-    passwordKey: password
-  replicationSecret:
-    name: pg-repl
-    usernameKey: username
-    passwordKey: password
+  superuserUsername: username
+  superuserPassword: password
   clusterSpec:
     synchronousReplication: true
     minSynchronousStandbys: 1 # quorum-like replication
