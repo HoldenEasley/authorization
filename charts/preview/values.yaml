@@ -20,3 +20,23 @@ preview:
     repository:
     tag:
     pullPolicy: IfNotPresent
+  env:
+    - SPRING_PROFILES_ACTIVE: postgres
+
+# Stolon Configuration
+authorization-db:
+  superuserSecret:
+    name: pg-su
+    usernameKey: username
+    passwordKey: password
+  replicationSecret:
+    name: pg-repl
+    usernameKey: username
+    passwordKey: password
+  clusterSpec:
+    synchronousReplication: true
+    minSynchronousStandbys: 1 # quorum-like replication
+    maxSynchronousStandbys: 1 # quorum-like replication
+    initMode: new
+  pgParameters:
+    max_connections: 100
