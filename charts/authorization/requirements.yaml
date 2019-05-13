@@ -1,5 +1,5 @@
 dependencies:
   - alias: authorization-db
     repository: http://chartmuseum.jenkins-x.io
-    name: stolon
+    name: stable/stolon
     version: 1.1.0
