@@ -10,6 +10,8 @@ image:
 # define environment variables here as a map of key: value
 env:
   SPRING_PROFILES_ACTIVE: postgres
+  POSTGRES_DATABASE_HOST: authorization-db-proxy
+  POSTGRES_DATABASE_PORT: 5432
 
 envFromSecretRef:
   - name: POSTGRES_DATABASE_USER_NAME

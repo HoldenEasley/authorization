@@ -22,6 +22,8 @@ preview:
     pullPolicy: IfNotPresent
   env:
     SPRING_PROFILES_ACTIVE: postgres
+    POSTGRES_DATABASE_HOST: preview-authorization-db-proxy
+    POSTGRES_DATABASE_PORT: 5432
     POSTGRES_DATABASE_USER_NAME: username
     POSTGRES_DATABASE_PASSWORD: password
   envFromSecretRef: []
