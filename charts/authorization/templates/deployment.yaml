@@ -56,9 +56,9 @@ spec:
 {{ toYaml .Values.resources | indent 12 }}
       terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
 {{- end }}
-    initContainers:
+      initContainers:
 {{- range .Values.serviceDependencies}}
-      - name: init-{{ . }}
-        image: busybox:1.28
-        command: ['sh', '-c', 'until nslookup {{.}}; do echo waiting for {{.}}; sleep 2; done;']
-{- end}
+        - name: init-{{ . }}
+          image: busybox:1.28
+          command: ['sh', '-c', 'until nslookup {{.}}; do echo waiting for {{.}}; sleep 2; done;']
+{{- end}}
